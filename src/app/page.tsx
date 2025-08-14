@@ -222,211 +222,342 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Categories Section */}
-      <section className="categories-section py-16">
+      {/* Main Content Area with 2-Column Layout */}
+      <section className="main-content-area py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h3 className="text-3xl font-bold text-gray-900 text-center mb-12">
-            Shop by Category
-          </h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div className="category-card text-center group cursor-pointer">
-              <div className="bg-gray-100 rounded-2xl p-8 mb-4 group-hover:bg-gray-200 transition-colors">
-                <span className="text-4xl">👕</span>
-              </div>
-              <h4 className="font-semibold text-gray-900">Clothing</h4>
-            </div>
-            <div className="category-card text-center group cursor-pointer">
-              <div className="bg-gray-100 rounded-2xl p-8 mb-4 group-hover:bg-gray-200 transition-colors">
-                <span className="text-4xl">📱</span>
-              </div>
-              <h4 className="font-semibold text-gray-900">Electronics</h4>
-            </div>
-            <div className="category-card text-center group cursor-pointer">
-              <div className="bg-gray-100 rounded-2xl p-8 mb-4 group-hover:bg-gray-200 transition-colors">
-                <span className="text-4xl">🏠</span>
-              </div>
-              <h4 className="font-semibold text-gray-900">Home & Garden</h4>
-            </div>
-            <div className="category-card text-center group cursor-pointer">
-              <div className="bg-gray-100 rounded-2xl p-8 mb-4 group-hover:bg-gray-200 transition-colors">
-                <span className="text-4xl">⚽</span>
-              </div>
-              <h4 className="font-semibold text-gray-900">Sports</h4>
-            </div>
-          </div>
-        </div>
-      </section>
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
 
-      {/* Featured Products */}
-      <section className="featured-products py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="section-header flex justify-between items-center mb-12">
-            <h3 className="text-3xl font-bold text-gray-900">
-              Featured Products
-            </h3>
-            <a
-              href="#"
-              className="text-blue-600 hover:text-blue-800 font-semibold"
-            >
-              View All →
-            </a>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="product-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden group">
-              <div className="product-image aspect-square bg-gray-200 relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/20 flex items-center justify-center">
-                  <span className="text-6xl">👕</span>
-                </div>
-                <button className="absolute top-4 right-4 bg-white p-2 rounded-full shadow-md opacity-0 group-hover:opacity-100 transition-opacity">
-                  <svg
-                    className="w-5 h-5 text-gray-600"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                    />
-                  </svg>
-                </button>
+            {/* Sidebar */}
+            <aside className="sidebar-content lg:col-span-1">
+              {/* Categories Navigation */}
+              <div className="categories-widget bg-white p-6 rounded-xl shadow-sm mb-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Categories</h3>
+                <ul className="space-y-3">
+                  <li>
+                    <a href="#" className="category-link flex items-center justify-between p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                      <div className="flex items-center">
+                        <span className="text-2xl mr-3">👕</span>
+                        <span className="font-medium text-gray-700">Clothing</span>
+                      </div>
+                      <span className="text-sm text-gray-500">(234)</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="category-link flex items-center justify-between p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                      <div className="flex items-center">
+                        <span className="text-2xl mr-3">📱</span>
+                        <span className="font-medium text-gray-700">Electronics</span>
+                      </div>
+                      <span className="text-sm text-gray-500">(156)</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="category-link flex items-center justify-between p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                      <div className="flex items-center">
+                        <span className="text-2xl mr-3">🏠</span>
+                        <span className="font-medium text-gray-700">Home & Garden</span>
+                      </div>
+                      <span className="text-sm text-gray-500">(89)</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="category-link flex items-center justify-between p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                      <div className="flex items-center">
+                        <span className="text-2xl mr-3">⚽</span>
+                        <span className="font-medium text-gray-700">Sports</span>
+                      </div>
+                      <span className="text-sm text-gray-500">(123)</span>
+                    </a>
+                  </li>
+                </ul>
               </div>
-              <div className="product-info p-4">
-                <h4 className="font-semibold text-gray-900 mb-2">
-                  Premium Cotton T-Shirt
-                </h4>
-                <p className="text-gray-600 text-sm mb-3">
-                  Comfortable and stylish everyday wear
-                </p>
-                <div className="product-price-actions flex justify-between items-center">
-                  <span className="text-2xl font-bold text-gray-900">
-                    $29.99
-                  </span>
-                  <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-                    Add to Cart
+
+              {/* Price Filter */}
+              <div className="price-filter bg-white p-6 rounded-xl shadow-sm mb-6">
+                <h4 className="text-lg font-semibold text-gray-900 mb-4">Price Range</h4>
+                <div className="price-inputs space-y-3">
+                  <div className="flex gap-2">
+                    <input
+                      type="number"
+                      placeholder="Min"
+                      className="flex-1 px-3 py-2 border border-gray-300 rounded-lg text-sm"
+                    />
+                    <input
+                      type="number"
+                      placeholder="Max"
+                      className="flex-1 px-3 py-2 border border-gray-300 rounded-lg text-sm"
+                    />
+                  </div>
+                  <button className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                    Apply Filter
                   </button>
                 </div>
               </div>
-            </div>
 
-            <div className="product-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden group">
-              <div className="product-image aspect-square bg-gray-200 relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/20 flex items-center justify-center">
-                  <span className="text-6xl">📱</span>
-                </div>
-                <button className="absolute top-4 right-4 bg-white p-2 rounded-full shadow-md opacity-0 group-hover:opacity-100 transition-opacity">
-                  <svg
-                    className="w-5 h-5 text-gray-600"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                    />
-                  </svg>
+              {/* Special Offers Widget */}
+              <div className="offers-widget bg-gradient-to-br from-purple-500 to-pink-500 p-6 rounded-xl text-white">
+                <h4 className="text-lg font-bold mb-2">🎯 Special Deal!</h4>
+                <p className="text-sm text-purple-100 mb-4">
+                  Get 25% off on your first order with code WELCOME25
+                </p>
+                <button className="w-full bg-white text-purple-600 py-2 rounded-lg font-semibold hover:bg-purple-50 transition-colors">
+                  Claim Offer
                 </button>
               </div>
-              <div className="product-info p-4">
-                <h4 className="font-semibold text-gray-900 mb-2">
-                  Wireless Headphones
-                </h4>
-                <p className="text-gray-600 text-sm mb-3">
-                  High-quality sound with noise cancellation
-                </p>
-                <div className="product-price-actions flex justify-between items-center">
-                  <span className="text-2xl font-bold text-gray-900">
-                    $199.99
-                  </span>
-                  <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-                    Add to Cart
-                  </button>
-                </div>
-              </div>
-            </div>
+            </aside>
 
-            <div className="product-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden group">
-              <div className="product-image aspect-square bg-gray-200 relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/20 flex items-center justify-center">
-                  <span className="text-6xl">⌚</span>
-                </div>
-                <button className="absolute top-4 right-4 bg-white p-2 rounded-full shadow-md opacity-0 group-hover:opacity-100 transition-opacity">
-                  <svg
-                    className="w-5 h-5 text-gray-600"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
+            {/* Main Content */}
+            <main className="main-content lg:col-span-3">
+              {/* Featured Products */}
+              <div className="featured-products-section">
+                <div className="section-header flex justify-between items-center mb-8">
+                  <h3 className="text-3xl font-bold text-gray-900">
+                    Featured Products
+                  </h3>
+                  <a
+                    href="#"
+                    className="text-blue-600 hover:text-blue-800 font-semibold"
                   >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                    />
-                  </svg>
-                </button>
-              </div>
-              <div className="product-info p-4">
-                <h4 className="font-semibold text-gray-900 mb-2">
-                  Smart Watch
-                </h4>
-                <p className="text-gray-600 text-sm mb-3">
-                  Track your fitness and stay connected
-                </p>
-                <div className="product-price-actions flex justify-between items-center">
-                  <span className="text-2xl font-bold text-gray-900">
-                    $299.99
-                  </span>
-                  <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-                    Add to Cart
-                  </button>
+                    View All →
+                  </a>
                 </div>
-              </div>
-            </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+                  <div className="product-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden group">
+                    <div className="product-image aspect-square bg-gray-200 relative overflow-hidden">
+                      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/20 flex items-center justify-center">
+                        <span className="text-6xl">👕</span>
+                      </div>
+                      <button className="absolute top-4 right-4 bg-white p-2 rounded-full shadow-md opacity-0 group-hover:opacity-100 transition-opacity">
+                        <svg
+                          className="w-5 h-5 text-gray-600"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                    <div className="product-info p-4">
+                      <h4 className="font-semibold text-gray-900 mb-2">
+                        Premium Cotton T-Shirt
+                      </h4>
+                      <p className="text-gray-600 text-sm mb-3">
+                        Comfortable and stylish everyday wear
+                      </p>
+                      <div className="product-price-actions flex justify-between items-center">
+                        <span className="text-2xl font-bold text-gray-900">
+                          $29.99
+                        </span>
+                        <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                          Add to Cart
+                        </button>
+                      </div>
+                    </div>
+                  </div>
 
-            <div className="product-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden group">
-              <div className="product-image aspect-square bg-gray-200 relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/20 flex items-center justify-center">
-                  <span className="text-6xl">👟</span>
+                  <div className="product-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden group">
+                    <div className="product-image aspect-square bg-gray-200 relative overflow-hidden">
+                      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/20 flex items-center justify-center">
+                        <span className="text-6xl">📱</span>
+                      </div>
+                      <button className="absolute top-4 right-4 bg-white p-2 rounded-full shadow-md opacity-0 group-hover:opacity-100 transition-opacity">
+                        <svg
+                          className="w-5 h-5 text-gray-600"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                    <div className="product-info p-4">
+                      <h4 className="font-semibold text-gray-900 mb-2">
+                        Wireless Headphones
+                      </h4>
+                      <p className="text-gray-600 text-sm mb-3">
+                        High-quality sound with noise cancellation
+                      </p>
+                      <div className="product-price-actions flex justify-between items-center">
+                        <span className="text-2xl font-bold text-gray-900">
+                          $199.99
+                        </span>
+                        <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                          Add to Cart
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="product-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden group">
+                    <div className="product-image aspect-square bg-gray-200 relative overflow-hidden">
+                      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/20 flex items-center justify-center">
+                        <span className="text-6xl">⌚</span>
+                      </div>
+                      <button className="absolute top-4 right-4 bg-white p-2 rounded-full shadow-md opacity-0 group-hover:opacity-100 transition-opacity">
+                        <svg
+                          className="w-5 h-5 text-gray-600"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                    <div className="product-info p-4">
+                      <h4 className="font-semibold text-gray-900 mb-2">
+                        Smart Watch
+                      </h4>
+                      <p className="text-gray-600 text-sm mb-3">
+                        Track your fitness and stay connected
+                      </p>
+                      <div className="product-price-actions flex justify-between items-center">
+                        <span className="text-2xl font-bold text-gray-900">
+                          $299.99
+                        </span>
+                        <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                          Add to Cart
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="product-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden group">
+                    <div className="product-image aspect-square bg-gray-200 relative overflow-hidden">
+                      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/20 flex items-center justify-center">
+                        <span className="text-6xl">👟</span>
+                      </div>
+                      <button className="absolute top-4 right-4 bg-white p-2 rounded-full shadow-md opacity-0 group-hover:opacity-100 transition-opacity">
+                        <svg
+                          className="w-5 h-5 text-gray-600"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                    <div className="product-info p-4">
+                      <h4 className="font-semibold text-gray-900 mb-2">
+                        Running Shoes
+                      </h4>
+                      <p className="text-gray-600 text-sm mb-3">
+                        Lightweight and comfortable for all terrains
+                      </p>
+                      <div className="product-price-actions flex justify-between items-center">
+                        <span className="text-2xl font-bold text-gray-900">
+                          $129.99
+                        </span>
+                        <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                          Add to Cart
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="product-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden group">
+                    <div className="product-image aspect-square bg-gray-200 relative overflow-hidden">
+                      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/20 flex items-center justify-center">
+                        <span className="text-6xl">🎧</span>
+                      </div>
+                      <button className="absolute top-4 right-4 bg-white p-2 rounded-full shadow-md opacity-0 group-hover:opacity-100 transition-opacity">
+                        <svg
+                          className="w-5 h-5 text-gray-600"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                    <div className="product-info p-4">
+                      <h4 className="font-semibold text-gray-900 mb-2">
+                        Gaming Headset
+                      </h4>
+                      <p className="text-gray-600 text-sm mb-3">
+                        Crystal clear audio for gaming enthusiasts
+                      </p>
+                      <div className="product-price-actions flex justify-between items-center">
+                        <span className="text-2xl font-bold text-gray-900">
+                          $89.99
+                        </span>
+                        <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                          Add to Cart
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="product-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden group">
+                    <div className="product-image aspect-square bg-gray-200 relative overflow-hidden">
+                      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/20 flex items-center justify-center">
+                        <span className="text-6xl">💻</span>
+                      </div>
+                      <button className="absolute top-4 right-4 bg-white p-2 rounded-full shadow-md opacity-0 group-hover:opacity-100 transition-opacity">
+                        <svg
+                          className="w-5 h-5 text-gray-600"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                    <div className="product-info p-4">
+                      <h4 className="font-semibold text-gray-900 mb-2">
+                        Laptop Stand
+                      </h4>
+                      <p className="text-gray-600 text-sm mb-3">
+                        Ergonomic design for better productivity
+                      </p>
+                      <div className="product-price-actions flex justify-between items-center">
+                        <span className="text-2xl font-bold text-gray-900">
+                          $49.99
+                        </span>
+                        <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                          Add to Cart
+                        </button>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <button className="absolute top-4 right-4 bg-white p-2 rounded-full shadow-md opacity-0 group-hover:opacity-100 transition-opacity">
-                  <svg
-                    className="w-5 h-5 text-gray-600"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                    />
-                  </svg>
-                </button>
               </div>
-              <div className="product-info p-4">
-                <h4 className="font-semibold text-gray-900 mb-2">
-                  Running Shoes
-                </h4>
-                <p className="text-gray-600 text-sm mb-3">
-                  Lightweight and comfortable for all terrains
-                </p>
-                <div className="product-price-actions flex justify-between items-center">
-                  <span className="text-2xl font-bold text-gray-900">
-                    $129.99
-                  </span>
-                  <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-                    Add to Cart
-                  </button>
-                </div>
-              </div>
-            </div>
+            </main>
           </div>
         </div>
       </section>
