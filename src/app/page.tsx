@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Accordion from "./components/Accordion";
+import Carousel from "./components/Carousel";
 
 export default function Home() {
   return (
@@ -401,7 +402,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+            </section>
 
       {/* FAQ Section */}
       <section className="faq-section py-16">
@@ -419,39 +420,33 @@ export default function Home() {
               {
                 id: "shipping",
                 title: "What are your shipping options and delivery times?",
-                content:
-                  "We offer standard shipping (5-7 business days) for $5.99, express shipping (2-3 business days) for $12.99, and overnight shipping for $19.99. Free standard shipping is available on orders over $75. International shipping is available to most countries with delivery times varying by location.",
+                content: "We offer standard shipping (5-7 business days) for $5.99, express shipping (2-3 business days) for $12.99, and overnight shipping for $19.99. Free standard shipping is available on orders over $75. International shipping is available to most countries with delivery times varying by location."
               },
               {
                 id: "returns",
                 title: "What is your return policy?",
-                content:
-                  "We accept returns within 30 days of purchase for most items in their original condition. Items must be unworn, unused, and in original packaging. Electronics and personalized items may have different return policies. Return shipping is free for defective items, otherwise customers are responsible for return shipping costs.",
+                content: "We accept returns within 30 days of purchase for most items in their original condition. Items must be unworn, unused, and in original packaging. Electronics and personalized items may have different return policies. Return shipping is free for defective items, otherwise customers are responsible for return shipping costs."
               },
               {
                 id: "sizing",
                 title: "How do I find the right size for clothing items?",
-                content:
-                  "Each product page includes a detailed size chart specific to that item. We recommend measuring yourself and comparing to our size charts for the best fit. If you're between sizes, we generally recommend sizing up. Our customer service team is also available to help with sizing questions.",
+                content: "Each product page includes a detailed size chart specific to that item. We recommend measuring yourself and comparing to our size charts for the best fit. If you're between sizes, we generally recommend sizing up. Our customer service team is also available to help with sizing questions."
               },
               {
                 id: "payment",
                 title: "What payment methods do you accept?",
-                content:
-                  "We accept all major credit cards (Visa, Mastercard, American Express, Discover), PayPal, Apple Pay, Google Pay, and Buy Now Pay Later options through Klarna and Afterpay. All transactions are processed securely using industry-standard encryption.",
+                content: "We accept all major credit cards (Visa, Mastercard, American Express, Discover), PayPal, Apple Pay, Google Pay, and Buy Now Pay Later options through Klarna and Afterpay. All transactions are processed securely using industry-standard encryption."
               },
               {
                 id: "warranty",
                 title: "Do your products come with a warranty?",
-                content:
-                  "Yes, most of our products come with manufacturer warranties. Electronics typically include 1-2 year warranties, while clothing and accessories have quality guarantees. Warranty terms vary by product and manufacturer. Extended warranty options are available for many electronics at checkout.",
+                content: "Yes, most of our products come with manufacturer warranties. Electronics typically include 1-2 year warranties, while clothing and accessories have quality guarantees. Warranty terms vary by product and manufacturer. Extended warranty options are available for many electronics at checkout."
               },
               {
                 id: "account",
                 title: "Do I need to create an account to make a purchase?",
-                content:
-                  "While you can checkout as a guest, creating an account offers many benefits including order tracking, faster checkout, saved addresses, wishlist functionality, and exclusive member offers. Account creation is free and takes just a few minutes.",
-              },
+                content: "While you can checkout as a guest, creating an account offers many benefits including order tracking, faster checkout, saved addresses, wishlist functionality, and exclusive member offers. Account creation is free and takes just a few minutes."
+              }
             ]}
             allowMultiple={false}
           />
