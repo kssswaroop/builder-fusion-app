@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Accordion from "./components/Accordion";
+import Carousel from "./components/Carousel";
 
 export default function Home() {
   return (
@@ -109,6 +111,114 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Promotional Carousel */}
+      <section className="promotional-carousel py-16 bg-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Carousel
+            items={[
+              {
+                id: "summer-sale",
+                content: (
+                  <div className="promo-slide bg-gradient-to-r from-orange-500 to-red-500 text-white p-12 text-center">
+                    <div className="max-w-4xl mx-auto">
+                      <h3 className="text-4xl lg:text-5xl font-bold mb-4">
+                        🌞 Summer Sale Spectacular!
+                      </h3>
+                      <p className="text-xl lg:text-2xl mb-8 text-orange-100">
+                        Up to 60% off on summer essentials. Limited time only!
+                      </p>
+                      <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                        <button className="bg-white text-orange-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-orange-50 transition-colors">
+                          Shop Summer Collection
+                        </button>
+                        <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-orange-600 transition-colors">
+                          View All Deals
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                )
+              },
+              {
+                id: "free-shipping",
+                content: (
+                  <div className="promo-slide bg-gradient-to-r from-green-500 to-emerald-500 text-white p-12 text-center">
+                    <div className="max-w-4xl mx-auto">
+                      <h3 className="text-4xl lg:text-5xl font-bold mb-4">
+                        🚚 Free Shipping Weekend
+                      </h3>
+                      <p className="text-xl lg:text-2xl mb-8 text-green-100">
+                        Free shipping on all orders. No minimum purchase required!
+                      </p>
+                      <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                        <button className="bg-white text-green-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-green-50 transition-colors">
+                          Start Shopping
+                        </button>
+                        <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-green-600 transition-colors">
+                          Learn More
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                )
+              },
+              {
+                id: "new-arrivals",
+                content: (
+                  <div className="promo-slide bg-gradient-to-r from-purple-500 to-indigo-500 text-white p-12 text-center">
+                    <div className="max-w-4xl mx-auto">
+                      <h3 className="text-4xl lg:text-5xl font-bold mb-4">
+                        ✨ New Arrivals Daily
+                      </h3>
+                      <p className="text-xl lg:text-2xl mb-8 text-purple-100">
+                        Discover the latest trends and must-have items every day
+                      </p>
+                      <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                        <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-purple-50 transition-colors">
+                          See What's New
+                        </button>
+                        <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-600 transition-colors">
+                          Subscribe for Updates
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                )
+              },
+              {
+                id: "loyalty-program",
+                content: (
+                  <div className="promo-slide bg-gradient-to-r from-blue-600 to-cyan-500 text-white p-12 text-center">
+                    <div className="max-w-4xl mx-auto">
+                      <h3 className="text-4xl lg:text-5xl font-bold mb-4">
+                        💎 VIP Loyalty Program
+                      </h3>
+                      <p className="text-xl lg:text-2xl mb-8 text-blue-100">
+                        Earn points, get exclusive discounts, and enjoy premium benefits
+                      </p>
+                      <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                        <button className="bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-50 transition-colors">
+                          Join VIP Program
+                        </button>
+                        <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-blue-600 transition-colors">
+                          Learn About Benefits
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                )
+              }
+            ]}
+            autoPlay={true}
+            autoPlayInterval={6000}
+            showDots={true}
+            showArrows={true}
+            loop={true}
+            className="h-80 lg:h-96"
+          />
         </div>
       </section>
 
@@ -399,6 +509,55 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+            </section>
+
+      {/* FAQ Section */}
+      <section className="faq-section py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">
+              Frequently Asked Questions
+            </h3>
+            <p className="text-xl text-gray-600">
+              Find answers to common questions about our products and services
+            </p>
+          </div>
+          <Accordion
+            items={[
+              {
+                id: "shipping",
+                title: "What are your shipping options and delivery times?",
+                content: "We offer standard shipping (5-7 business days) for $5.99, express shipping (2-3 business days) for $12.99, and overnight shipping for $19.99. Free standard shipping is available on orders over $75. International shipping is available to most countries with delivery times varying by location."
+              },
+              {
+                id: "returns",
+                title: "What is your return policy?",
+                content: "We accept returns within 30 days of purchase for most items in their original condition. Items must be unworn, unused, and in original packaging. Electronics and personalized items may have different return policies. Return shipping is free for defective items, otherwise customers are responsible for return shipping costs."
+              },
+              {
+                id: "sizing",
+                title: "How do I find the right size for clothing items?",
+                content: "Each product page includes a detailed size chart specific to that item. We recommend measuring yourself and comparing to our size charts for the best fit. If you're between sizes, we generally recommend sizing up. Our customer service team is also available to help with sizing questions."
+              },
+              {
+                id: "payment",
+                title: "What payment methods do you accept?",
+                content: "We accept all major credit cards (Visa, Mastercard, American Express, Discover), PayPal, Apple Pay, Google Pay, and Buy Now Pay Later options through Klarna and Afterpay. All transactions are processed securely using industry-standard encryption."
+              },
+              {
+                id: "warranty",
+                title: "Do your products come with a warranty?",
+                content: "Yes, most of our products come with manufacturer warranties. Electronics typically include 1-2 year warranties, while clothing and accessories have quality guarantees. Warranty terms vary by product and manufacturer. Extended warranty options are available for many electronics at checkout."
+              },
+              {
+                id: "account",
+                title: "Do I need to create an account to make a purchase?",
+                content: "While you can checkout as a guest, creating an account offers many benefits including order tracking, faster checkout, saved addresses, wishlist functionality, and exclusive member offers. Account creation is free and takes just a few minutes."
+              }
+            ]}
+            allowMultiple={false}
+          />
         </div>
       </section>
 
